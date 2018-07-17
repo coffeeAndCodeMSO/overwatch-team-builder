@@ -1,0 +1,8 @@
+{
+    "pathParameters": {
+      "id": "24e77fa0-8325-11e8-b9fe-6d340ce347d2"
+    },
+    "requestContext": {
+      "userId": "USER-ID-1234"
+    }
+  }

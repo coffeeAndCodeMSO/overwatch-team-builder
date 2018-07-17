@@ -1,0 +1,49 @@
+service: overwatch-teams-api
+
+# Use the serverless-webpack plugin to transpile ES6
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+# serverless-webpack configuration
+# Enable auto-packing of external modules
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: prod
+  region: us-east-1
+
+functions:
+  create:
+    handler: teams/create.main
+    events:
+      - http:
+        path: teams
+        method: post
+        cors: true
+  get:
+    handler: teams/get.main
+    events:
+      - http:
+        path: teams/{id}
+        method: get
+        cors: true
+  list:
+    handler: teams/list.main
+    events:
+      - http:
+        path: teams
+        method: get
+        cors: true
+  update:
+    handler: teams/update.main
+    events:
+      - http:
+        path: teams/{id}
+        method: put
+        cors: true

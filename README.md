@@ -2,7 +2,7 @@
 A platform that allows users to create teams for the Blizzard game 'Overwatch'.
 
 ## Tools
-This project is a dive into Amazon Web Services as a way to learn the benefits of cloud services to host an app vs creating your own local server. 
+This project is a dive into Amazon Web Services as a way to learn the benefits of cloud services to host an app vs creating your own local server (all of which are free services).
 - AWS Lambda
 - AWS API Gateway
 - AWS S3
